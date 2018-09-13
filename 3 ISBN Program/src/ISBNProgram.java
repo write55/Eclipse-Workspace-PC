@@ -5,7 +5,7 @@ public class ISBNProgram {
 	public static void main(String[] args) {
 
 		// Remove Dashes
-		String ISBNorig = "0-393-96945-2";
+		String ISBNorig = "957-621-541-2";
 
 		int loc1 = ISBNorig.indexOf("-");
 		int loc2 = ISBNorig.indexOf("-", loc1 + 1);
@@ -59,3 +59,39 @@ public class ISBNProgram {
 	}
 
 }
+
+// input: 0-7645-0417-7
+// output:
+//		ISBN Number: 0-7645-0417-7
+//		Check digit from number: 7
+//		Check digit from calculations: 7
+
+//input: 0-7654-0417-6
+//output:
+//		ISBN Number: 0-7654-0417-6
+//		Check digit from number: 6
+//		Check digit from calculations: 6
+
+//input: 0-912517-31-X
+//output:
+//		ISBN Number: 0-912517-31-X
+//		Check digit from number: X (10)
+//		Check digit from calculations: X (10)
+
+//input: 3-314-21145-7
+//output:
+//		ISBN Number: 3-314-21145-7
+//		Check digit from number: 7
+//		Check digit from calculations: 7
+
+//input: 91-29-65497-1
+//output:
+//		ISBN Number: 91-29-65497-1
+//		Check digit from number: 1
+//		Check digit from calculations: 1
+
+//input: 957-621-541-2
+//output:
+//		ISBN Number: 957-621-541-2
+//		Check digit from number: 2
+//		Check digit from calculations: 2
