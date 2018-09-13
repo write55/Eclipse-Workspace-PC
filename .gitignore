@@ -1,5 +1,6 @@
 /.metadata/
 /.recommenders/
 !.mvn/wrapper/maven-wrapper.jar
-
 *.class
+**/.settings
+**/bin
