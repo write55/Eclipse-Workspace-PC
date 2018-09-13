@@ -28,7 +28,6 @@ public class FancyISBNProgram {
 
 		// REMOVE DASHES
 
-		// ISBNorig = "0-393-96945-2";
 		int loc1 = ISBNorig.indexOf("-");
 		int loc2 = ISBNorig.indexOf("-", loc1 + 1);
 		int loc3 = ISBNorig.indexOf("-", loc2 + 1);
