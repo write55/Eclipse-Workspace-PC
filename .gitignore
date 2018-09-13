@@ -2,5 +2,3 @@
 /.recommenders/
 !.mvn/wrapper/maven-wrapper.jar
 *.class
-*/bin
-*/.settings
