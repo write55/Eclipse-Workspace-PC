@@ -9,7 +9,7 @@ public class ISBNProgram {
 		// REMOVE DASHES
 
 		// Change ISBN here
-		String ISBNorig = "0-912517-31-X";
+		String ISBNorig = "0-7645-0417-7";
 
 		// loc is location of dash
 		int loc1 = ISBNorig.indexOf("-");
