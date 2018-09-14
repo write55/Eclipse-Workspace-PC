@@ -1,5 +1,8 @@
 
 // Aaron Wu
+// 9/12/18
+// Program to take ISBN Number and calculate a check digit for comparison with given check digit
+// This is the Fancy version with limited console input, a quicker algorithm, and a thing that says if the check digits are the same
 
 import java.util.Scanner;
 
@@ -28,24 +31,17 @@ public class FancyISBNProgram {
 
 		// REMOVE DASHES
 
+		// ISBNorig = "0-393-96945-2";
 		int loc1 = ISBNorig.indexOf("-");
 		int loc2 = ISBNorig.indexOf("-", loc1 + 1);
 		int loc3 = ISBNorig.indexOf("-", loc2 + 1);
-		// System.out.println(loc1);
-		// System.out.println(loc2);
-		// System.out.println(loc3);
 
 		String ISBNtemp1 = ISBNorig.substring(0, loc1);
 		String ISBNtemp2 = ISBNorig.substring(loc1 + 1, loc2);
 		String ISBNtemp3 = ISBNorig.substring(loc2 + 1, loc3);
 		String ISBNtemp4 = ISBNorig.substring(loc3 + 1);
-		// System.out.println(ISBNtemp1);
-		// System.out.println(ISBNtemp2);
-		// System.out.println(ISBNtemp3);
-		// System.out.println(ISBNtemp4);
 
 		String ISBN = ISBNtemp1 + ISBNtemp2 + ISBNtemp3 + ISBNtemp4;
-		// System.out.println(ISBN);
 
 		// MULTIPLY VALUES
 		int check = 0, value;
@@ -56,19 +52,14 @@ public class FancyISBNProgram {
 		}
 
 		check = 10 - ((check - 1) % 11);
-		char givencheck = ISBNorig.charAt(12);
 
 		// PRINT STUFF
 		System.out.println("ISBN Number: " + ISBNorig);
-
-		if (givencheck == 'X') {
-			System.out.println("Check digit from number: " + givencheck + " (10)");
-			System.out.println("Check digit from calculations: X (" + check + ")");
-		} else {
-			System.out.println("Check digit from number: " + givencheck);
-			System.out.println("Check digit from calculations: " + check);
-		}
-
+		String digits = "0123456789X";
+		System.out.println("Check digit from number: " + ISBNorig.charAt(12));
+		System.out.println("Check digit from calculations: " + digits.charAt(check));
+		
+		// CHECK IF DIGITS MATCH
 		if (check == (ISBNorig.charAt(12) - '0')) {
 			System.out.println("Check digit is correct, proceed");
 		} else {
