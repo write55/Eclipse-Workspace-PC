@@ -37,9 +37,9 @@ public class Fraction {
 	}
 
 	/*
-	 * Adds another fraction object given by the argument to the original
-	 * fraction, uses common denominator to add and outputs a new fraction
-	 * object as the result
+	 * Adds another fraction object given by the argument to the original fraction,
+	 * uses common denominator to add and outputs a new fraction object as the
+	 * result
 	 */
 	public Fraction add(Fraction other) {
 		int sumnum = (getNumerator() * other.getDenominator()) + (other.getNumerator() * getDenominator());
@@ -48,6 +48,10 @@ public class Fraction {
 		return answer;
 	}
 
+	/*
+	 * Same as previous method, uses objects in the same way but uses common
+	 * denominator to subtract second Fraction object from first instead of adding
+	 */
 	public Fraction subtract(Fraction other) {
 		int sumdiff = (getNumerator() * other.getDenominator()) - (other.getNumerator() * getDenominator());
 		int newden = other.getDenominator() * getDenominator();
@@ -55,6 +59,9 @@ public class Fraction {
 		return answer;
 	}
 
+	/*
+	 * Same as previous but multiplies two Fraction objects together
+	 */
 	public Fraction multiply(Fraction other) {
 		int prodnum = getNumerator() * other.getNumerator();
 		int proddem = getDenominator() * other.getDenominator();
@@ -62,6 +69,9 @@ public class Fraction {
 		return answer;
 	}
 
+	/*
+	 * Same as previous but divides first Fraction object by second Fraction object
+	 */
 	public Fraction divide(Fraction other) {
 		int prodnum = getNumerator() * other.getDenominator();
 		int proddem = getDenominator() * other.getNumerator();
