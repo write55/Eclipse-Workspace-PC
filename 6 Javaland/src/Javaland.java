@@ -67,7 +67,6 @@ public class Javaland {
 		System.out.println("You entered " + input + " For your income");
 		income = new Integer(input);
 		return income;
-
 	}
 
 	/*
