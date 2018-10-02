@@ -60,13 +60,13 @@ public class Javaland {
 	}
 
 	// Gets Input for income and returns an int
-	public int getInput() throws IOException {
+	public static int getInput() throws IOException {
 		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 		System.out.print("Enter your current income rounded to the nearest integer: ");
 		String input = in.readLine();
 		System.out.println("You entered " + input + " For your income");
-		income = new Integer(input);
-		return income;
+		int i = new Integer(input);
+		return i;
 	}
 
 	/*
@@ -74,8 +74,7 @@ public class Javaland {
 	 * calculates tax with applyTax() then prints the answer
 	 */
 	public static void main(String[] args) throws IOException {
-		Javaland income = new Javaland(0);
-		income.getInput();
+		Javaland income = new Javaland(Javaland.getInput());
 		double tax = income.applyTax();
 		System.out.println(income.toString());
 		System.out.println("Tax is " + tax);
