@@ -1,5 +1,5 @@
 
-/** Aaron Wu
+/* Aaron Wu
  *  10/2/18
  * 
  * Program calculates the bill for water usage of three account categories
