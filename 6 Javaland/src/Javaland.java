@@ -41,13 +41,13 @@ public class Javaland {
 		if (income > LIVINGLIMIT) {
 			tax += LIVINGFEE;
 		}
-		if (income > LIM1 && income < LIM2) {
-			tax += (income - LIM1) * PERCENT2;
-			tax += LIM1 * PERCENT1;
-		} else if (income > LIM2) {
+		if (income > LIM2) {
 			tax += LIM1 * PERCENT1;
 			tax += (LIM2 - LIM1) * PERCENT2;
 			tax += (income - LIM2) * PERCENT3;
+		} else if (income > LIM1) {
+			tax += (income - LIM1) * PERCENT2;
+			tax += LIM1 * PERCENT1;
 		} else {
 			tax += income * PERCENT1;
 		}
