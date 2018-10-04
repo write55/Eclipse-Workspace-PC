@@ -81,16 +81,16 @@ public class WaterBill {
 	 * data values, takes care of converting the code to a complete word as well
 	 */
 	public String toString() {
-		String c = "";
+		String type = "";
 		if (getCode() == 'h') {
-			c = "home";
+			type = "home";
 		} else if (getCode() == 'c') {
-			c = "commercial";
+			type = "commercial";
 		} else {
-			c = "industrial";
+			type = "industrial";
 		}
-		return "Your account number is " + account + ", your bill is for " + c + " use" + "\n"
-				+ "Your amount of gallons used is " + gallons;
+		return "Your account number is " + getAccount() + ", your bill is for " + type + " use" + "\n"
+				+ "Your amount of gallons used is " + getGallons();
 		// newline up there to make output look better when we combine it with
 		// the tax when printing in main
 	}
@@ -136,11 +136,11 @@ public class WaterBill {
 	}
 
 	public static void main(String[] args) throws IOException {
-		WaterBill waterAccount = new WaterBill(0, ' ', 0);
+		WaterBill account = new WaterBill(0, ' ', 0);
 		// makes empty "WaterBill" object to fill with getInput(),
-		waterAccount.getInput();
-		double tax = (int) (100.0 * waterAccount.applyTax() + .5) / 100.0;
-		System.out.println(waterAccount.toString() + ", the amount due is " + tax);
+		account.getInput();
+		double tax = (int) (100.0 * account.applyTax() + .5) / 100.0;
+		System.out.println(account.toString() + ", the amount due is " + tax);
 	}
 }
 
